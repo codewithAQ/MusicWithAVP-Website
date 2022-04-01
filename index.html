@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>MusicWithAVP</title>
+</head>
+<body>
+    <style>
+    *{
+        margin:0;
+        padding: 0;
+        
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+     
+    .navbar{
+        display: flex; 
+        align-items: center;
+        justify-items: center;
+        position: sticky;
+        top: 0; 
+        cursor: pointer;
+       
+    }
+    .logo{
+        width: 13%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+ .logo img{
+     width: 33%;
+     border: solid white;
+    border-radius: 50px;
+ }
+    .nav-list{
+        width: 70%;
+        /* background-color: gold; */
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+    .nav-list li{
+        list-style: none;
+        padding: 26px 30px;
+
+    }
+    .nav-list li a{
+       text-decoration: none;
+       color: white;
+       font-size: 20px;
+
+    }
+    .nav-list li a:hover{
+       text-decoration: none;
+       color: rgb(145, 132, 132);
+
+    }
+    .rightnav{
+      
+        width: 30%;
+        text-align: right;
+        padding:0 83px;
+        
+    }
+    #search{
+        padding: 5px;
+        font-size: 17px;
+        border: 4px solid black;
+        border-radius: 9px;
+    }
+    .background{
+        background: rgba(0,0,0,0.7) url('img/bg.jpg');   
+        background-blend-mode: darken;
+    }
+    .box-main{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-family:'Courier New', Courier, monospace;
+         height: 100%;
+    }
+    .firstsection{
+        height: 100vh;
+        
+    }
+    .firsthalf{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+        
+    }
+    .firsthalf{
+        margin-top: 2px;
+    }
+   .firsthalf{
+       background-color: rgb(51, 147, 185);
+       width: 2000px;
+       height: 600px;
+   }
+   .text-big{
+       font-size: 50px;
+   }
+   .text-small{
+       font-size: 25px;
+   }
+   .btn{
+       padding: 8px 20px;
+       margin: 7px 3px;
+       border: 2px solid rgb(61, 56, 56);
+       border-radius: 8px;
+       font-size: 20px;
+       font-family: 'Libre Baskerville', serif;
+       background: rgb(202, 216, 78);
+       cursor: pointer;
+       color: rgb(0, 0, 0);
+
+   }
+   .btn-dark{
+       background-color: rgb(241, 236, 227);
+       border-radius: 8px;
+       padding: 8px 20px;
+       margin: 7px 3px;
+       font-size: 2vh;
+   }
+   .btn-sm{
+       padding: 6px 10px;
+       vertical-align: middle;
+   }
+   .secright{
+       height: 500px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       
+   }
+   .contact{
+       background-color: rgb(241, 238, 238);
+       height: 90vh;
+   }  
+   .text-centre{ 
+       font-size: 35px;
+       text-align: center;
+   }
+   .form{
+       max-width: 62%;
+       margin: 25px auto;
+   }
+   .form input{
+       margin: 15px;
+       width: 100%;
+       padding: 7px;
+       font-size: 15px;
+       border: 2px solid rgb(213, 214, 147);
+       border-radius: 15px;
+   }
+   .heading{
+       text-align: centre;
+        
+   }
+   .txt-centre{
+       font-size: 45px;
+       text-align: center;
+       background-color: #dfdfff;
+        margin: 20px;
+        border: 1px solid black;
+        
+   }
+   .text-footer{
+    justify-content: center;
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Cormorant Garamond', serif;
+    color: rgb(255, 255, 255);
+     
+   }
+   .about-me{
+       text-align: center;
+       font-size: 40px;
+       font-family: sans-serif;
+       margin: 4px;
+       padding: 10px;
+       background-color: #d9ffd9;
+        border: 1px solid;
+   
+       
+   }
+   .abt-inf{
+       text-align: center;
+       font-size: 25px;
+       margin: 20px;
+   }
+   .burger{
+       display: none;
+   position: absolute;
+   cursor: pointer;
+   right: 5%;
+   top: 15px;
+   }
+   .line{
+       width: 33px;
+       background-color: white;
+       height: 4px;
+       margin: 3px 3px;
+   }
+   
+  @media only screen and (max-width: 1140px){
+    .nav-list{
+        flex-direction: column;
+         transition: all 0.5s ease-out;
+    }
+       .navbar{ 
+           height: 447px;
+           flex-direction: column;
+           
+       }
+       .rightnav{
+           text-align: center;
+       }
+       .burger{
+           display: block;
+       }
+       .box-main{
+           flex-direction: column-reverse;
+           max-width: 100%;
+       }
+       .h-nav-resp{
+           height: 72px;
+       }
+       .v-class-resp{
+           opacity: 0;
+       }
+       .secright{
+           flex-direction: column-reverse;
+           max-width: 100%;
+       }
+       .text-big{
+           text-align: center;
+       }
+       .about-me{
+        text-align: center;
+       font-size: 40px;
+       font-family: sans-serif;
+       margin: 4px;
+       padding: 10px;
+       background-color: #ffcf78;
+       border: 2px solid black;
+       border-radius: 10px;
+       }
+       .text-small{
+           text-align: center;
+           max-width: 100%;
+       }
+       .btn{
+           text-align: center;
+       }
+       .firsthalf{
+           max-width: 100%;
+       }
+       .txt-centre{
+        background-color: #dfdfff;
+        margin: 20px;
+        border: 2px solid black;
+        border-radius: 16px;
+       }
+       
+  }
+   
+</style>
+ 
+</head>
+<body>
+
+<nav class="navbar background h-nav-resp"> 
+ <ul class="nav-list v-class-resp">
+     <div class="logo"><img src="img/img.jpg" alt="logo"></div>
+     <li><a href="#home">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#contact">Contact Me</a></li>
+ </ul>
+  <div class="rightnav v-class-resp">  
+  </div>
+  <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+  </div>
+</nav>
+<sectionlass  class = "background firstsection">
+    <div class="box-main">
+     <div class="firsthalf">
+         <p class="text-big">MusicWithAVP</p>
+         <p class="text-small">Welcome To The Journey Of My Music</p>
+         <div class="buttons">
+             <button class="btn">Subscribe</button>
+             <button class="btn">Watch Video</button>
+         </div>
+
+     </div>
+    </div> 
+    <section class="about" id="about">
+        <h2 class="about-me">About Me</h2>
+        <p class="abt-inf">Hello Everybody! I'am Aditya Patil & Welcome to my "Website".Hope You will like it. I Play Guitar & flute And Upload The videos in this official Channel Of MusicWithAVP & I live In Pune, Do share my videos to your friends and subscribe to this channel. Scrool Down To Contact Me!
+        </p>
+
+    </section>
+    <section class="heading">
+        <h2 class="txt-centre"> Let's Have Some Music</h2>
+    </section>
+</section>
+<section class="secright">
+     
+    <iframe height="315" src="https://www.youtube.com/embed/0xTASmLI9XQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe height="315" src="https://www.youtube.com/embed/rn3U6B8pThA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe height="315" src="https://www.youtube.com/embed/dKHszf8pBDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     
+</section>
+ <section>
+   
+  <section class="contact" id="contact">
+   <h2 class="text-centre">Contact Me</h2>
+  <div class="form">
+      <input type="Phone" name="Phone" id="Phone" placeholder="Enter Your Phone">
+      <input type="E-Mail" name="E-Mail" id="E-Mail" placeholder="Enter Your E-Mail">
+      <input type="text" name="Name" id="Name" placeholder="Enter Your Name">    
+      <button class="btn-dark">Submit</button>
+
+  </div>
+  </section>
+  <footer class="background">
+      <p class="text-footer"> 
+      Copyright &copy; 2027 - www.MusicWithAVP.com - All rights reserved
+    </p>
+  </footer>
+  <script src="js/resp.js"></script>
+</body>
+</html>
